@@ -25,7 +25,7 @@ jobs:
           run: mvn package 
         ### use sonarqube to do code analysis. Ensure that you have a sonarqube server running and you've created a project. 
         - name: code analysis with sonarqube
-          run: mvn sonar:sonar -Dsonar.projectKey=mykey -Dsonar.host.url=${{secret.YOUR_URL_URL}} -Dsonar.login=${{secrets.YOUR_TOKEN_LN}}
+          run: mvn sonar:sonar -Dsonar.projectKey=mykey -Dsonar.host.url=${{secrets.YOUR_URL_URL}} -Dsonar.login=${{secrets.YOUR_TOKEN_LN}}
            ## Upload to github packages and ensure that you update the pom.xml at the level of distrubution management.
         - name: Upload to github packages
           run: mvn --batch-mode deploy
