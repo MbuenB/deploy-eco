@@ -25,7 +25,7 @@ jobs:
         run: mvn package
 
       - name: code analysis with sonarqube
-        run: mvn sonar:sonar -Dsonar.projectKey=mykey -Dsonar.host.url=${{secrets.YOUR_URL_URL}} -Dsonar.login=${{secrets.YOUR_TOKEN_LN}}
+        run: mvn sonar:sonar -Dsonar.projectKey=mykey -Dsonar.host.url=${{secrets.YOUR_URL_URLs}} -Dsonar.login=${{secrets.YOUR_TOKEN_LN}}
 
       - name: Upload to github packages
         run: mvn --batch-mode deploy
